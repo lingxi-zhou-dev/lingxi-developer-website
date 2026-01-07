@@ -1,0 +1,76 @@
+@import "../../app.scss";
+
+.experience {
+  height: calc(100vh - 100px);
+  background-color: beige;
+  display: flex;
+  align-items: center;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .textContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+      font-size: 88px;
+      color: black;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: rebeccapurple;
+      letter-spacing: 6px;
+    }
+  }
+
+  .experienceContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .experienceItem {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      h3 {
+        font-size: 22px;
+        color: black;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 14px;
+        color: #777;
+      }
+    }
+
+    h4 {
+      margin-top: 5px;
+      font-size: 16px;
+      color: rebeccapurple;
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      max-width: 600px;
+    }
+  }
+}

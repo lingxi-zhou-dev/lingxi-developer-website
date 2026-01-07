@@ -1,0 +1,61 @@
+@import "../../app.scss";
+
+.skills {
+  height: calc(100vh - 100px);
+  background-color: beige;
+  display: flex;
+  align-items: center;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .textContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+      font-size: 88px;
+      color: black;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: rebeccapurple;
+      letter-spacing: 6px;
+    }
+  }
+
+  .skillsContainer {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 50px;
+  }
+
+  .skillGroup {
+    h3 {
+      font-size: 22px;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 16px;
+        color: #555;
+        padding: 6px 0;
+      }
+    }
+  }
+}
