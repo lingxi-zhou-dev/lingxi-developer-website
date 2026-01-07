@@ -1,0 +1,88 @@
+@import "../../app.scss";
+
+.projects {
+  min-height: calc(100vh - 100px);
+  background-color: #f6f3ee;
+  display: flex;
+  align-items: center;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    padding: 100px 80px;
+    width: 100%;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 72px;
+      color: #000;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: rebeccapurple;
+      letter-spacing: 6px;
+      margin: 10px 0 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+    }
+  }
+
+  .projectList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .projectCard {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e4e1db;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #000;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    span {
+      font-size: 14px;
+      color: #777;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects {
+    .projectList {
+      grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+      font-size: 56px;
+    }
+  }
+}
