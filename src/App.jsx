@@ -3,6 +3,7 @@ import Lingxi from "./components/lingxi/Lingxi";
 import Navbar from "./components/navbar/Navbar";
 import Experience from "./components/Experience/Experience";
 import Skills from "./components/skills/Skills";
+import Projects from "./components/projects/Projects";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
       </section>
 
       <section id="Projects">
-        Projects
+        <Projects />
       </section>
 
       <section id="Contact">

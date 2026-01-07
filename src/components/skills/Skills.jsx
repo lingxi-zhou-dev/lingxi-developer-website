@@ -3,36 +3,27 @@ import { motion, useInView } from "framer-motion";
 import "./skills.scss";
 
 const containerVariants = {
-  initial: {
-    x: -300,
-    opacity: 0,
-  },
+  initial: { opacity: 0, y: 40 },
   animate: {
-    x: 0,
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 0.8,
-      staggerChildren: 0.12,
+      duration: 0.6,
+      staggerChildren: 0.08,
     },
   },
 };
 
 const itemVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-  },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
 };
 
 const skills = {
   Frontend: ["React", "JavaScript", "HTML", "CSS", "Framer Motion", "Vite"],
   Backend: ["Node.js", "Python", "REST APIs"],
-  Tools: ["Git", "GitHub", "VS Code", "Docker"],
-  Other: ["UI/UX Design", "Performance Optimization", "SEO"],
+  Tools: ["Git", "GitHub", "Docker", "VS Code"],
+  Other: ["UI/UX", "Performance", "SEO"],
 };
 
 const Skills = () => {
@@ -50,27 +41,32 @@ const Skills = () => {
       <div className="wrapper">
         {/* Text */}
         <motion.div className="textContainer" variants={containerVariants}>
-          <motion.h1 variants={itemVariants}>Skills</motion.h1>
-          <motion.h2 variants={itemVariants}>
-            Tools & technologies I use
-          </motion.h2>
+          <motion.h1>Skills</motion.h1>
+          <motion.h2>Technologies I work with</motion.h2>
+          <p>
+            A focused set of tools and technologies I use to build reliable,
+            modern software.
+          </p>
         </motion.div>
 
-        {/* Skills list */}
+        {/* Skills */}
         <motion.div className="skillsContainer" variants={containerVariants}>
           {Object.entries(skills).map(([category, items]) => (
-            <motion.div
-              className="skillGroup"
-              key={category}
-              variants={itemVariants}
-            >
+            <div className="skillGroup" key={category}>
               <h3>{category}</h3>
-              <ul>
+              <div className="bubbles">
                 {items.map((skill) => (
-                  <li key={skill}>{skill}</li>
+                  <motion.span
+                    className="bubble"
+                    key={skill}
+                    variants={itemVariants}
+                    whileHover={{ y: -2 }}
+                  >
+                    {skill}
+                  </motion.span>
                 ))}
-              </ul>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </motion.div>
       </div>
