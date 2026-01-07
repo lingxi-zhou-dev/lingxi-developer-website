@@ -50,8 +50,13 @@ const Lingxi = () => {
         <motion.h1 variants={textVariants}>
             Lingxi Zhou
         </motion.h1>
-            
+        <motion.h2 variants={textVariants}> Software Engineer</motion.h2>
+        <motion.h3 variants={textVariants}>Hey there, I am a Software Engineer in Tampa, FL. Welcome to my website!</motion.h3>   
         </motion.div>
+
+        <div className="imageContainer">
+          <img src="/lingxipfp.jpeg" alt="Lingxi" />
+        </div>
         
       </div>
       

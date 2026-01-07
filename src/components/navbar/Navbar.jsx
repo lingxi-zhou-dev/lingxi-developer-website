@@ -15,6 +15,25 @@ const Navbar = () => {
         >
           
         </motion.span>
+        <div className="social">
+            <a 
+                href="https://www.linkedin.com/in/lingxi-zhou/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                <img src="/linkedin.png" alt="LinkedIn" />
+            </a>
+
+            <a 
+                href="https://github.com/lingxi-zhou-dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                <img src="/github.png" alt="GitHub" />
+            </a>
+
+        </div>
+
         
       </div>
     </div>
