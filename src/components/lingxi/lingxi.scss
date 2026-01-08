@@ -2,11 +2,12 @@
 
 .lingxi {
   gap: 3rem;
-  align-items: flex-start;
+  align-items: flex-end;
   height: calc(100vh - 100px);
-  background-color: #f6f3ee;
+  background-color:#BBDCE5;
   display: flex;
   justify-content: center;
+  padding-bottom: 5rem;
 }
 
 .centerContent {
@@ -21,12 +22,12 @@
 
   h1 {
     font-size: 72px;
-    color: #000;
+    color:black;
   }
 
   h2 {
     font-size: 26px;
-    color: rebeccapurple;
+    color: black;
     letter-spacing: 6px;
     margin-bottom: 12px;
   }
@@ -35,13 +36,13 @@
 /* Retro scroll panel */
 .scrollArea {
   width: 100%;
-  max-width: 760px;
-  max-height: 320px;
+  min-width: 700px;
+  max-height: 500px;
   overflow-y: auto;
   padding: 24px 28px;
   margin-bottom: 20px;
 
-  background: #f1ede6;
+  background: #ECEEDF;
   border: 3px solid #2b2b2b;
   border-radius: 12px;
 
@@ -93,6 +94,12 @@
       6px 6px 0 #2b2b2b,
       inset 0 0 0 2px #ffffff;
   }}
+
+  .bioRow {
+    display: flex;
+    align-items: top;
+    gap: 32px;
+  }
 
 .highlights {
   display: flex;

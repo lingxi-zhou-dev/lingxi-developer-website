@@ -21,7 +21,9 @@ const Lingxi = () => {
       >
         <motion.h1 variants={textVariants}>Hi there! I'm Lingxi</motion.h1>
         <motion.h2 variants={textVariants}>Software Engineer</motion.h2>
-
+        
+        <div className="bioRow">
+          
         <motion.div className="profileImage" variants={textVariants}>
           <img src="/lingxipfp.jpeg" alt="Lingxi Zhou" />
         </motion.div>
@@ -68,11 +70,8 @@ const Lingxi = () => {
             🤝 Connect and reach out if you are seeking a dedicated collaborator!
           </motion.p>
         </div>
-
-        <motion.div className="highlights" variants={textVariants}>
-          <span>📍 United States </span>
-          <span>💻 Full-Stack</span>
-        </motion.div>
+        </div>
+        
       </motion.div>
     </div>
   );

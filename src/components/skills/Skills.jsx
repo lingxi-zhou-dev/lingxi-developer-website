@@ -20,10 +20,18 @@ const itemVariants = {
 };
 
 const skills = {
-  Frontend: ["React", "JavaScript", "HTML", "CSS", "Framer Motion", "Vite"],
-  Backend: ["Node.js", "Python", "REST APIs"],
-  Tools: ["Git", "GitHub", "Docker", "VS Code"],
-  Other: ["UI/UX", "Performance", "SEO"],
+  Programming: [
+    "C#", "SQL", "Python", "Panda", "Go", "JavaScript", "C/C++", "Visual Basic" 
+  ],
+  Frameworks: [
+    ".NET", "Blazor", "Angular", "React", "Django", "Node.js", "DevExpress"
+  ],
+  Tools: [
+    "Azure DevOps", "Git", "Docker", "AWS", "Google Vertex AI", "Prometheus", "Grafana"
+  ],
+  Skills: [
+    "Backend Services", "AI Implementation", "Data Science", "System Monitoring", "Data Engineering", "Software Security", "Database Design"
+  ]
 };
 
 const Skills = () => {
@@ -43,10 +51,6 @@ const Skills = () => {
         <motion.div className="textContainer" variants={containerVariants}>
           <motion.h1>Skills</motion.h1>
           <motion.h2>Technologies I work with</motion.h2>
-          <p>
-            A focused set of tools and technologies I use to build reliable,
-            modern software.
-          </p>
         </motion.div>
 
         {/* Skills */}
