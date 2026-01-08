@@ -30,25 +30,25 @@ const itemVariants = {
 
 const experiences = [
   {
-    role: "Software Engineer",
-    company: "Medical Media Company",
-    date: "2023 – Present",
+    role: "Software Developer",
+    company: "Tenex Software Solutions",
+    date: "Sep 2023 – Nov 2025",
     description:
-      "Building internal tools and public-facing websites. Working with AI integrations, automation, and modern frontend architecture.",
+      "Modernized election management software by architecting cross-server infrastructure in Blazor, C#, and SQL",
   },
   {
-    role: "Frontend Developer",
-    company: "Freelance",
-    date: "2021 – 2023",
+    role: "Software Engineer Intern",
+    company: "Microsoft",
+    date: "May 2023 – Aug 2023",
     description:
-      "Designed and developed marketing websites and dashboards with a strong focus on UX, performance, and clean design.",
+      "Optimized Azure Storage performance by implementing a negative caching mechanism to reduce Key Vault accesses in C#",
   },
   {
-    role: "Computer Science Graduate",
-    company: "University",
-    date: "2017 – 2021",
+    role: "Supervised Research",
+    company: "University of South Florida",
+    date: "Aug 2022 – Dec 2022",
     description:
-      "Studied software engineering, data structures, algorithms, databases, and operating systems.",
+      "Researched algorithmic mechanics for collectible card games and studied Machine Learning techniques and principles",
   },
 ];
 
