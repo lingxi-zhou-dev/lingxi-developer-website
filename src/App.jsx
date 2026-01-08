@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Experience from "./components/Experience/Experience";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
       </section>
 
       <section id="Contact">
-        Contact
+        <Contact />
       </section>
     </div>
   );

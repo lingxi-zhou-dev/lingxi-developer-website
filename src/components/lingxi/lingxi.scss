@@ -1,71 +1,110 @@
 @import "../../app.scss";
 
 .lingxi {
+  gap: 3rem;
+  align-items: flex-start;
   height: calc(100vh - 100px);
-  background-color: #f6f3ee; // soft neutral (works with coffee theme)
+  background-color: #f6f3ee;
   display: flex;
+  justify-content: center;
+}
+
+.centerContent {
+  width: 100%;
+  max-width: 900px; // overall width
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 20px;
 
-  .wrapper {
-    max-width: 1366px;
-    margin: auto;
-    padding: 0 80px;
+  h1 {
+    font-size: 72px;
+    color: #000;
+  }
+
+  h2 {
+    font-size: 26px;
+    color: rebeccapurple;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Retro scroll panel */
+.scrollArea {
+  width: 100%;
+  max-width: 760px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+
+  background: #f1ede6;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 0 0 2px #ffffff,
+    inset 0 0 0 4px #c9c4bc,
+    4px 4px 0 #2b2b2b;
+
+  font-family: "Courier New", monospace;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  /* 👇 This is the key fix */
+  text-align: left;
+
+  p {
+    font-size: 16px;
+    color: #2b2b2b;
+    line-height: 1.8;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #2b2b2b #e4dfd8;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+    border-radius: 4px;
+  }
+}
+
+.profileImage {
+  flex-shrink: 0;
+  width: 260px;
+
+  img {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
-  }
+    border-radius: 16px;
+    object-fit: cover;
 
-  .textContainer {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    /* subtle professional framing */
+    border: 3px solid #2b2b2b;
+    box-shadow:
+      6px 6px 0 #2b2b2b,
+      inset 0 0 0 2px #ffffff;
+  }}
 
-    h1 {
-      font-size: 72px;
-      color: #000;
-    }
+.highlights {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    h2 {
-      font-size: 28px;
-      color: rebeccapurple;
-      letter-spacing: 8px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #555;
-      max-width: 560px;
-      line-height: 1.7;
-    }
-  }
-
-  .highlights {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-
-    span {
-      font-size: 14px;
-      color: #333;
-      background: #eae6df;
-      padding: 8px 14px;
-      border-radius: 999px;
-    }
-  }
-
-  .imageContainer {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-
-    img {
-      width: 260px; // smaller image
-      height: 260px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
+  span {
+    font-size: 14px;
+    color: #333;
+    background: #eae6df;
+    padding: 8px 14px;
+    border-radius: 999px;
   }
 }
