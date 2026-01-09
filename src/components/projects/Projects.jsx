@@ -27,7 +27,7 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1>Projects</h1>
-          <h2>Spare time projects!</h2>
+          <h2>Past and Current Interests!</h2>
         </motion.div>
 
         <motion.div
@@ -56,10 +56,10 @@ const Projects = () => {
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>🔢 Data Cleaning</h3>
+            <h3>Placeholder</h3>
             <p>
-              Python-based tool for cleaning and visualizing large datasets
-              from Google Sheets.
+              Maybe this will be QuickBite Application. Or it could be a new project. 
+              Or Maybe this can be NLP projects. Not sure yet.
             </p>
             <span>Python · Pandas</span>
 
