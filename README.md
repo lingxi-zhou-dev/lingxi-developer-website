@@ -2,6 +2,8 @@
 
 Lingxi Developer Website is a personal portfolio website designed to serve as a dynamic resume and showcase my projects and skills. The development of the website is ongoing.
 
+URL: lingxizhou.com
+
 # Project Overview
 
 Purpose: To create an interactive, visually appealing online resume and portfolio.
