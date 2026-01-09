@@ -12,3 +12,6 @@ React: For building a responsive, component-based frontend.
 Framer Motion: For smooth animations and interactive UI elements.
 
 Vercel + Resend: Contact form allows for visitors to send messages to me!
+
+
+<img width="1907" height="1057" alt="Portfolio_Website_Photo" src="https://github.com/user-attachments/assets/0e2bb9f8-8cb4-429d-bb20-d048c231d064" />
