@@ -1,7 +1,7 @@
 import "./app.scss";
 import Lingxi from "./components/lingxi/Lingxi";
 import Navbar from "./components/navbar/Navbar";
-import Experience from "./components/Experience/Experience";
+import Experience from "./components/experience/Experience";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
