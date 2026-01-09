@@ -1,10 +1,11 @@
 @import "../../app.scss";
 
 .experience {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   background-color: #BBDCE5;
   display: flex;
   align-items: center;
+  outline: 4px solid #BBDCE5;
 
   .wrapper {
     max-width: 1366px;

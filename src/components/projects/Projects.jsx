@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 const containerVariants = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.15,
-    },
+    transition: { staggerChildren: 0.15 },
   },
 };
 
@@ -29,7 +27,7 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1>Projects</h1>
-          <h2>Spare time projects!</h2>
+          <h2>Past and Current Interests!</h2>
         </motion.div>
 
         <motion.div
@@ -42,36 +40,72 @@ const Projects = () => {
           <motion.div className="projectCard" variants={itemVariants}>
             <h3>🏈 NFL Draft Planner</h3>
             <p>
-            The NFL Draft Planner is an Angular and TypeScript-based application designed for 
-            Fantasy Football enthusiasts to efficiently plan and organize their drafts.
+              Angular + TypeScript app to help fantasy football players
+              plan and organize NFL drafts.
             </p>
-            <span>Angular · TypeScript · HTML . CSS</span>
+            <span>Angular · TypeScript · HTML · CSS</span>
+
+            <a
+              href="https://github.com/lingxi-zhou-dev/DraftPlanner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="projectButton"
+            >
+              Details
+            </a>
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>🔢 Data Cleaning</h3>
+            <h3>Placeholder</h3>
             <p>
-              Python-based tool for cleaning and graphing large datasets on Google Sheets.
+              Maybe this will be QuickBite Application. Or it could be a new project. 
+              Or Maybe this can be NLP projects. Not sure yet.
             </p>
             <span>Python · Pandas</span>
+
+            <a
+              href="https://github.com/lingxi-zhou-dev/PandasScript"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="projectButton"
+            >
+              Details
+            </a>
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
             <h3>🎥 Machine Learning Video Clipper</h3>
             <p>
-            A exporatory project that takes long-form videos, 
-            uses an LLM to identify and timestamp high-impact moments, 
-            and then cuts them with FFmpeg into brand-consistent, vertical shorts for YouTube and TikTok.
+              Uses LLMs to detect high-impact moments in long videos and
+              automatically cut vertical shorts.
             </p>
             <span>Python · FFmpeg · WhisperX · MoviePy</span>
+
+            <a
+              href="https://github.com/YOUR_USERNAME/video-clipper"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="projectButton"
+            >
+              Details
+            </a>
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
             <h3>🛍️ Shopify Integration</h3>
             <p>
-              Integrate dated WordPress Website to use Shopify in the Backend.
+              Migrated a legacy WordPress site to Shopify-backed infrastructure for E-Commerce business.
             </p>
             <span>Shopify CLI · Cloudflare · Python</span>
+
+            <a
+              href="https://github.com/YOUR_USERNAME/shopify-integration"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="projectButton"
+            >
+              Details
+            </a>
           </motion.div>
         </motion.div>
       </div>
