@@ -5,9 +5,7 @@ Lingxi Developer Website is a personal portfolio website designed to serve as a 
 # Project Overview
 
 Purpose: To create an interactive, visually appealing online resume and portfolio.
-
 Technologies Used:
-
 React: For building a responsive, component-based frontend.
-
 Framer Motion: For smooth animations and interactive UI elements.
+Vercel + Resend: Contact form allows for visitors to send messages to me!
