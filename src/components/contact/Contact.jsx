@@ -1,26 +1,42 @@
-import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useState, useRef } from "react";
 import "./contact.scss";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  // 1. Create a state object to hold the form data
+  const recaptchaRef = useRef();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [captchaToken, setCaptchaToken] = useState(null); // Tracks if user is human
 
-  // 2. A function to update the state whenever you type
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // 3. The function that talks to Vercel
+  // Captures the token when the user clicks the checkbox
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Stop page from refreshing
+    e.preventDefault();
+
+    if (!captchaToken) {
+      alert("Please complete the CAPTCHA first!");
+      return;
+    }
+
     console.log("Form submission started...");
+    
     await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      // Send the captchaToken along with the form data
+      body: JSON.stringify({ ...formData, captchaToken }),
     });
+
     alert("Message sent!");
+    setCaptchaToken(null);
+    recaptchaRef.current.reset(); // Resets the checkbox visually
   };
 
   return (
@@ -33,10 +49,7 @@ const Contact = () => {
         >
           <h1>Contact</h1>
           <h2>Let’s work together</h2>
-          <p>
-            If you’d like to collaborate, discuss a project, or just say hello,
-            feel free to reach out.
-          </p>
+          <p>If you’d like to collaborate, feel free to reach out.</p>
         </motion.div>
 
         <motion.form
@@ -48,39 +61,25 @@ const Contact = () => {
         >
           <div className="field">
             <label>Name</label>
-            <input 
-              type="text" 
-              name="name" 
-              value={formData.name} 
-              onChange={handleChange} /* 4. Linked to function */
-              placeholder="Your name" 
-              required 
-            />
+            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
           </div>
 
           <div className="field">
             <label>Email</label>
-            <input 
-              type="email" 
-              name="email" 
-              value={formData.email} 
-              onChange={handleChange} 
-              placeholder="you@example.com" 
-              required 
-            />
+            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" required />
           </div>
 
           <div className="field">
             <label>Message</label>
-            <textarea 
-              name="message" 
-              value={formData.message} 
-              onChange={handleChange} 
-              placeholder="Tell me about your idea…" 
-              required 
-            />
+            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Tell me about your idea…" required />
           </div>
 
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6LcCrUUsAAAAAJ6fuP3Z2h-tOgTkRw1v0CsBDvdX"
+            onChange={handleCaptchaChange}
+          />
+          
           <button type="submit">Send Message</button>
         </motion.form>
       </div>
