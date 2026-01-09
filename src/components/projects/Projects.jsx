@@ -29,11 +29,7 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1>Projects</h1>
-          <h2>Selected work & current interests</h2>
-          <p>
-            A mix of past projects and ideas I’m actively exploring — focused on
-            clean architecture, usability, and performance.
-          </p>
+          <h2>Spare time projects!</h2>
         </motion.div>
 
         <motion.div
@@ -44,39 +40,38 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>Personal Portfolio</h3>
+            <h3>🏈 NFL Draft Planner</h3>
             <p>
-              A modern React + Framer Motion portfolio focused on clarity,
-              motion, and accessibility.
+            The NFL Draft Planner is an Angular and TypeScript-based application designed for 
+            Fantasy Football enthusiasts to efficiently plan and organize their drafts.
             </p>
-            <span>React · SCSS · Framer Motion</span>
+            <span>Angular · TypeScript · HTML . CSS</span>
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>Data Cleaning Toolkit</h3>
+            <h3>🔢 Data Cleaning</h3>
             <p>
-              Python-based utilities for cleaning and validating large datasets,
-              with reusable pipelines.
+              Python-based tool for cleaning and graphing large datasets on Google Sheets.
             </p>
-            <span>Python · Pandas · CLI</span>
+            <span>Python · Pandas</span>
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>AI Video Clip Tool (WIP)</h3>
+            <h3>🎥 Machine Learning Video Clipper</h3>
             <p>
-              Exploring ML-driven video segmentation to automatically generate
-              short-form content.
+            A exporatory project that takes long-form videos, 
+            uses an LLM to identify and timestamp high-impact moments, 
+            and then cuts them with FFmpeg into brand-consistent, vertical shorts for YouTube and TikTok.
             </p>
-            <span>Python · ML · Video Processing</span>
+            <span>Python · FFmpeg · WhisperX · MoviePy</span>
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>E-commerce Experiments</h3>
+            <h3>🛍️ Shopify Integration</h3>
             <p>
-              Researching lightweight e-commerce setups focused on performance
-              and UX for small businesses.
+              Integrate dated WordPress Website to use Shopify in the Backend.
             </p>
-            <span>Next.js · Payments · UX</span>
+            <span>Shopify CLI · Cloudflare · Python</span>
           </motion.div>
         </motion.div>
       </div>
