@@ -27,7 +27,6 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1>Projects</h1>
-          <h2>Past and Current Interests!</h2>
         </motion.div>
 
         <motion.div

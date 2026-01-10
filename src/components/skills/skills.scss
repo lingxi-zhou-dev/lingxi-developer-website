@@ -1,10 +1,19 @@
 @import "../../app.scss";
 
 .skills {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   background: #BBDCE5;
   display: flex;
   align-items: center;
+  padding: 40px 20px;
+
+  @media (max-width: 768px) {
+    padding: 30px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+  }
 
   .wrapper {
     max-width: 1366px;
@@ -13,6 +22,20 @@
     display: flex;
     gap: 100px;
     align-items: center;
+
+    @media (max-width: 1024px) {
+      gap: 60px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 480px) {
+      gap: 30px;
+    }
   }
 
   .textContainer {
@@ -21,15 +44,43 @@
     flex-direction: column;
     gap: 30px;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      gap: 20px;
+    }
+
     h1 {
       font-size: 88px;
       color: black;
+      line-height: 1.1;
+
+      @media (max-width: 1024px) {
+        font-size: 72px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 56px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 40px;
+      }
     }
 
     h2 {
       font-size: 26px;
       color: black;
       letter-spacing: 6px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+        letter-spacing: 4px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
     }
 
     p {
@@ -37,6 +88,15 @@
       color: #555;
       max-width: 420px;
       line-height: 1.6;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        max-width: 100%;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -45,6 +105,15 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 20px;
+    }
   }
 
   .skillGroup {
@@ -52,6 +121,14 @@
       font-size: 20px;
       color: black;
       margin-bottom: 15px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+      }
     }
 
     .bubbles {
@@ -75,5 +152,10 @@
     inset 0 0 0 2px #ffffff,
     inset 0 0 0 4px #c9c4bc,
     4px 4px 0 #2b2b2b;
+
+    @media (max-width: 480px) {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
   }
 }

@@ -2,12 +2,27 @@
 
 .lingxi {
   gap: 3rem;
-  align-items: flex-end;
-  height: calc(100vh - 100px);
+  align-items: center;
+  min-height: calc(100vh - 100px);
   background-color:#BBDCE5;
   display: flex;
   justify-content: center;
   padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    gap: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    min-height: auto;
+  }
 }
 
 .centerContent {
@@ -23,6 +38,15 @@
   h1 {
     font-size: 72px;
     color:black;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 36px;
+    }
   }
 
   h2 {
@@ -30,13 +54,34 @@
     color: black;
     letter-spacing: 6px;
     margin-bottom: 12px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      letter-spacing: 4px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+    gap: 10px;
   }
 }
 
 /* Retro scroll panel */
 .scrollArea {
   width: 100%;
-  min-width: 700px;
+  flex: 1;
+  max-width: none;
   max-height: 500px;
   overflow-y: auto;
   padding: 24px 28px;
@@ -64,6 +109,14 @@
     font-size: 16px;
     color: #2b2b2b;
     line-height: 1.8;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 13px;
+    }
   }
 
   scrollbar-width: thin;
@@ -76,6 +129,18 @@
   &::-webkit-scrollbar-thumb {
     background-color: #2b2b2b;
     border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    max-height: 400px;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    max-height: 300px;
+    padding: 12px 16px;
+    gap: 10px;
   }
 }
 
@@ -93,13 +158,34 @@
     box-shadow:
       6px 6px 0 #2b2b2b,
       inset 0 0 0 2px #ffffff;
-  }}
-
-  .bioRow {
-    display: flex;
-    align-items: top;
-    gap: 32px;
   }
+
+  @media (max-width: 768px) {
+    width: 180px;
+  }
+
+  @media (max-width: 480px) {
+    width: 140px;
+  }
+}
+
+.bioRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
 
 .highlights {
   display: flex;
