@@ -19,6 +19,21 @@ const itemVariants = {
   animate: { opacity: 1 },
 };
 
+const mobileContainerVariants = {
+  initial: { opacity: 1 },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0,
+    },
+  },
+};
+
+const mobileItemVariants = {
+  initial: { opacity: 1 },
+  animate: { opacity: 1 },
+};
+
 const skills = {
   Programming: [
     "C#", "SQL", "Python", "Panda", "Go", "JavaScript", "C/C++", "Visual Basic" 
@@ -37,24 +52,24 @@ const skills = {
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   return (
     <motion.div
       ref={ref}
       className="skills"
-      variants={containerVariants}
+      variants={isMobile ? mobileContainerVariants : containerVariants}
       initial="initial"
       animate={isInView ? "animate" : "initial"}
     >
       <div className="wrapper">
         {/* Text */}
-        <motion.div className="textContainer" variants={containerVariants}>
+        <motion.div className="textContainer" variants={isMobile ? mobileContainerVariants : containerVariants}>
           <motion.h1>Skills</motion.h1>
-          <motion.h2>Technologies I work with</motion.h2>
         </motion.div>
 
         {/* Skills */}
-        <motion.div className="skillsContainer" variants={containerVariants}>
+        <motion.div className="skillsContainer" variants={isMobile ? mobileContainerVariants : containerVariants}>
           {Object.entries(skills).map(([category, items]) => (
             <div className="skillGroup" key={category}>
               <h3>{category}</h3>
@@ -63,7 +78,7 @@ const Skills = () => {
                   <motion.span
                     className="bubble"
                     key={skill}
-                    variants={itemVariants}
+                    variants={isMobile ? mobileItemVariants : itemVariants}
                     whileHover={{ y: -2 }}
                   >
                     {skill}

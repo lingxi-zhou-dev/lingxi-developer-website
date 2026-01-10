@@ -68,9 +68,6 @@ const Experience = () => {
         {/* Left text */}
         <motion.div className="textContainer" variants={containerVariants}>
           <motion.h1 variants={itemVariants}>Experience</motion.h1>
-          <motion.h2 variants={itemVariants}>
-            Where I’ve been & what I’ve built
-          </motion.h2>
         </motion.div>
 
         {/* Right timeline */}

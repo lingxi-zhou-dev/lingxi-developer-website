@@ -6,6 +6,10 @@
   justify-content: center;
   background-color: #ECEEDF;
   color: black;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
   
   .bg {
     z-index: 999;
@@ -15,6 +19,10 @@
     bottom: 0;
     width: 400px;
     background: #ECEEDF;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     .links {
       position: absolute;
@@ -28,6 +36,10 @@
 
       a {
         font-size: 40px;
+
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -44,5 +56,9 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

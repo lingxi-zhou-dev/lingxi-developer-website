@@ -48,8 +48,6 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1>Contact</h1>
-          <h2>Let’s work together</h2>
-          <p>If you’d like to collaborate, feel free to reach out.</p>
         </motion.div>
 
         <motion.form
