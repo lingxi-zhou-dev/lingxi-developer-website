@@ -55,15 +55,14 @@ const Projects = () => {
           </motion.div>
 
           <motion.div className="projectCard" variants={itemVariants}>
-            <h3>Placeholder</h3>
+            <h3>🍃 Tea House Ecommerce Site</h3>
             <p>
-              Maybe this will be QuickBite Application. Or it could be a new project. 
-              Or Maybe this can be NLP projects. Not sure yet.
+              E-commerce frontend built with Next.js and integrated with Shopify Storefront API
             </p>
-            <span>Python · Pandas</span>
+            <span>Next.js · React · Zustand · Tailwind CSS</span>
 
             <a
-              href="https://github.com/lingxi-zhou-dev/PandasScript"
+              href="https://github.com/lingxi-zhou-dev/Cup-Crumb-Tea-House-Website.git"
               target="_blank"
               rel="noopener noreferrer"
               className="projectButton"
