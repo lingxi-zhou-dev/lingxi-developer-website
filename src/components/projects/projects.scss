@@ -274,27 +274,46 @@
     }
 
     &.with-image {
+      flex-direction: row;
+
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+
       .projectImage {
         flex: 0 0 60%;
+        height: 100%;
+        min-height: 350px;
         overflow: hidden;
-        border-radius: 12px 12px 0 0;
+        border-radius: 12px 0 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ECEEDF;
 
         @media (max-width: 768px) {
           flex: 0 0 auto;
-          height: 300px;
+          height: auto;
           width: 100%;
+          border-radius: 12px 12px 0 0;
+          min-height: auto;
+          max-height: 300px;
         }
 
         @media (max-width: 480px) {
-          height: 220px;
+          max-height: 220px;
         }
 
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
           display: block;
           transition: transform 0.3s ease;
+          border: 3px solid #ffffff;
+          border-radius: 8px;
         }
 
         &:hover img {
@@ -315,10 +334,10 @@
           padding: 24px;
         }
       }
-    }
 
-    .projectImage {
-      display: none;
+      .projectImage {
+        display: none;
+      }
     }
 
     .projectContent {

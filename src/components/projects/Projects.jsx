@@ -25,7 +25,7 @@ const projectsData = [
     description:
       "Angular + TypeScript app to help fantasy football players plan and organize NFL drafts.",
     tech: "Angular · TypeScript · HTML · CSS",
-    image: "https://via.placeholder.com/600x400?text=NFL+Draft+Planner",
+    image: "/DraftPlannerDemo.gif",
     link: "https://github.com/lingxi-zhou-dev/DraftPlanner",
     showImage: true,
   },
