@@ -1,4 +1,5 @@
 import "./app.scss";
+import { Analytics } from "@vercel/analytics/react";
 import Lingxi from "./components/lingxi/Lingxi";
 import Navbar from "./components/navbar/Navbar";
 import Timeline from "./components/timeline/Timeline";
@@ -29,6 +30,7 @@ const App = () => {
       <section id="Contact">
         <Contact />
       </section>
+      <Analytics />
     </div>
   );
 };
