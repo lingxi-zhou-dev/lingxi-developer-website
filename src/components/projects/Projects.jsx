@@ -35,8 +35,8 @@ const projectsData = [
     description:
       "E-commerce frontend built with Next.js and integrated with Shopify Storefront API",
     tech: "Next.js · React · Zustand · Tailwind CSS",
-    image: "https://via.placeholder.com/600x400?text=Tea+House",
-    link: "https://github.com/lingxi-zhou-dev/Cup-Crumb-Tea-House-Website.git",
+    image: "/teawebsite.gif",
+    link: "https://github.com/lingxi-zhou-dev/TeaWebsite.git",
     showImage: true,
   },
   {
