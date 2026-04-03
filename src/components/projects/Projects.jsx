@@ -46,7 +46,7 @@ const projectsData = [
       "Uses LLMs to detect high-impact moments in long videos and automatically cut vertical shorts.",
     tech: "Python · FFmpeg · WhisperX · MoviePy",
     image: "https://via.placeholder.com/600x400?text=Video+Clipper",
-    link: null,
+    link: "https://github.com/lingxi-zhou-dev/YouTube-Shorts-Machine",
     showImage: false,
   },
   {
