@@ -21,7 +21,17 @@ const itemVariants = {
 const projectsData = [
   {
     id: 1,
-    title: "🏈 NFL Draft Planner",
+    title: " RickyClips YouTube Shorts Clipper",
+    description:
+      "An AI-powered tool that transforms long horizontal videos into viral-ready vertical shorts for TikTok, Instagram Reels, and YouTube Shorts.\n\nThe system uses Google Gemini API to analyze video transcripts and identify the most engaging moments, then generates platform-optimized metadata for each clip.",
+    tech: "Python · Flask · OpenCV · PySceneDetect · Google Gemini API · PyTorch",
+    image: "/rickyclips.png",
+    link: "https://github.com/lingxi-zhou-dev/YouTube-Shorts-Machine",
+    showImage: true,
+  },
+  {
+    id: 2,
+    title: "NFL Draft Planner",
     description:
       "Angular + TypeScript app to help fantasy football players plan and organize NFL drafts.",
     tech: "Angular · TypeScript · HTML · CSS",
@@ -30,8 +40,8 @@ const projectsData = [
     showImage: true,
   },
   {
-    id: 2,
-    title: "🍃 Tea House Ecommerce Site",
+    id: 3,
+    title: "Tea House Ecommerce Site",
     description:
       "E-commerce frontend built with Next.js and integrated with Shopify Storefront API",
     tech: "Next.js · React · Zustand · Tailwind CSS",
@@ -40,18 +50,18 @@ const projectsData = [
     showImage: true,
   },
   {
-    id: 3,
-    title: "🎥 Machine Learning Video Clipper",
+    id: 4,
+    title: "ZenSupport AI Agent",
     description:
-      "Uses LLMs to detect high-impact moments in long videos and automatically cut vertical shorts.",
-    tech: "Python · FFmpeg · WhisperX · MoviePy",
-    image: "https://via.placeholder.com/600x400?text=Video+Clipper",
-    link: "https://github.com/lingxi-zhou-dev/YouTube-Shorts-Machine",
-    showImage: false,
+      "Automated ZenDesk ticket triage system:\n• Processes customer support tickets every 20 minutes\n• Uses AI to detect and close spam tickets\n• Performs semantic search to retrieve relevant context\n• Uses GPT to determine appropriate next steps\n• Tags tickets with draft replies or assigns to staff\n\n(Image shows n8n prototype workflow)",
+    tech: "Python · PostgreSQL · Supabase · Docker",
+    image: "/n8n prototype.png",
+    link: "",
+    showImage: true,
   },
   {
-    id: 4,
-    title: "📦 Amazon Fulfillment Automation",
+    id: 5,
+    title: "Amazon Fulfillment Automation",
     description:
       "Automatically extract order information from Amazon Seller Central, auto-fill fulfillment forms in LaCore Connect, and track in Google Sheets.",
     tech: "JavaScript · TamperMonkey · Google Sheets App Script",

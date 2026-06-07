@@ -31,6 +31,13 @@ const itemVariants = {
 const experiences = [
   {
     role: "Software Developer",
+    company: "BozMD",
+    date: "Nov 2025 – Present",
+    description:
+      "Ecommerce development, Medical Data Management, Workflow Automation",
+  },
+  {
+    role: "Software Developer",
     company: "Tenex Software Solutions",
     date: "Sep 2023 – Nov 2025",
     description:
@@ -71,7 +78,10 @@ const Experience = () => {
         </motion.div>
 
         {/* Right timeline */}
-        <motion.div className="experienceContainer" variants={containerVariants}>
+        <motion.div
+          className="experienceContainer"
+          variants={containerVariants}
+        >
           {experiences.map((exp, index) => (
             <motion.div
               className="experienceItem"
